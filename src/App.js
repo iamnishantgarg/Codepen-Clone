@@ -1,8 +1,33 @@
-import React from "react";
+import React, { Fragment, useState } from "react";
+import Editor from "./components/Editor";
 
 function App() {
+  const [html, setHtml] = useState("");
+  const [css, setCss] = useState("");
+  const [javascript, setJavascript] = useState("");
+
   return (
-    <div className="pane top-pane">
+    <Fragment>
+      <div className="pane top-pane">
+        <Editor
+          language="xml"
+          displayName="HTML"
+          value={html}
+          onChange={setHtml}
+        />
+        <Editor
+          language="css"
+          displayName="CSS"
+          value={css}
+          onChange={setCss}
+        />
+        <Editor
+          language="javascript"
+          displayName="JS"
+          value={javascript}
+          onChange={setJavascript}
+        />
+      </div>
       <div className="pane">
         <iframe
           title="output"
@@ -12,7 +37,7 @@ function App() {
           width="100%"
         ></iframe>
       </div>
-    </div>
+    </Fragment>
   );
 }
 
