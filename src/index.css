@@ -22,6 +22,15 @@ body {
 }
 .editor-container.collapse .CodeMirror-scroll {
   position: absolute;
+  overflow: hidden !important;
+}
+
+.expand-collapse-btn {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
 .editor-title {
