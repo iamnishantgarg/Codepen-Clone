@@ -11,7 +11,7 @@ function Editor({ displayName, language, value, onChange }) {
     onChange(value);
   }
   return (
-    <div className="edior-container">
+    <div className="editor-container">
       <div className="editor-title">
         {displayName}
         <button>O/C</button>
