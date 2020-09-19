@@ -16,6 +16,14 @@ body {
   padding: 0.5rem;
   background-color: hsl(225, 6%, 25%);
 }
+
+.editor-container.collapse {
+  flex-grow: 0;
+}
+.editor-container.collapse .CodeMirror-scroll {
+  position: absolute;
+}
+
 .editor-title {
   display: flex;
   justify-content: space-between;

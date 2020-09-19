@@ -1,11 +1,21 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import Editor from "./components/Editor";
 
 function App() {
   const [html, setHtml] = useState("");
   const [css, setCss] = useState("");
   const [javascript, setJavascript] = useState("");
-
+  const [srcDoc, setSrcDoc] = useState("");
+  useEffect(() => {
+    const tt = setTimeout(() => {
+      setSrcDoc(`<html>
+  <body>${html}</body>
+  <style>${css}</style>
+  <script>${javascript}</script>
+  <html>`);
+    }, 1000);
+    return () => clearTimeout(tt);
+  }, [html, css, javascript]);
   return (
     <Fragment>
       <div className="pane top-pane">
@@ -31,6 +41,7 @@ function App() {
       <div className="pane">
         <iframe
           title="output"
+          srcDoc={srcDoc}
           sandbox="allow-scripts"
           frameBorder="0"
           height="100%"
