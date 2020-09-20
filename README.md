@@ -1,6 +1,6 @@
 # CodeIo
 
-Create using CRA and can be used for testing and shwcasing HTML,CSS,JavaScript
+Created using CRA and can be used for testing and shwcasing HTML,CSS,JavaScript
 
 # Screenshot
 
