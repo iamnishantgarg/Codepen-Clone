@@ -2,16 +2,16 @@
 
 Created using CRA and can be used for testing and showcasing HTML,CSS,JavaScript.
 
-# Screenshot
+# Screenshot:
 
 <img src="/screenshots/sam.png" alt="Sample image" />
 
-# Dependencies
+# Dependencies:
 
 - Codemirror
 - ReactCodeMirror2 (Controlled editor)
 
-# features
+# Features:
 
 - Real time preview of the code snippets.
 - Linting of the code.
